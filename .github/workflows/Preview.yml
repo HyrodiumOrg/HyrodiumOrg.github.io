@@ -49,11 +49,11 @@ jobs:
         branch: gh-pages
         folder: __site
         target-folder: PR${{github.event.number}}
-        repository-name: hyrodium/JuliaPackageComparisonsPreview
+        repository-name: HyrodiumOrg/preview
     - name: Post comment with preview link
       uses: peter-evans/create-or-update-comment@v3
       with:
         issue-number: ${{github.event.number}}
         body: |
-          Preview site is available [here](https://hyrodium.github.io/JuliaPackageComparisonsPreview/PR${{github.event.number}}).
+          Preview site is available [here](https://hyrodiumorg.github.io/preview/PR${{github.event.number}}).
         token: ${{ secrets.GITHUB_TOKEN }}
