@@ -3,6 +3,10 @@
 
 # How to use Franklin
 
+Hello! This commit is from the fork repository.
+Let's check docs preview!
+**Another modification!**
+
 \tableofcontents <!-- you can use \toc as well -->
 
 This section is meant as a refresher if you're new to Franklin.
