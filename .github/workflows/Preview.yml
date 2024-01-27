@@ -5,7 +5,6 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
       pull-requests: write
     steps:
     - name: Checkout
@@ -54,7 +53,7 @@ jobs:
     - name: Create comment
       uses: peter-evans/create-or-update-comment@v4
       with:
-        issue-number: 1
+        issue-number: ${{github.event.number}}
         body: |
           Preview site is available [here](https://hyrodiumorg.github.io/preview/PR${{github.event.number}}).
         reactions: '+1'
