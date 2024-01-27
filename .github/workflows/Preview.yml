@@ -55,4 +55,4 @@ jobs:
         issue-number: ${{github.event.number}}
         body: |
           Document generation succeeded!
-          Preview site is available at https://hyrodiumorg.github.io/preview/PR${{github.event.number}}🚀.
+          Preview site is available at https://hyrodiumorg.github.io/preview/PR${{github.event.number}} 🚀
