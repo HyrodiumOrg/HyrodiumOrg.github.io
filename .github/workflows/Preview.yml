@@ -51,9 +51,9 @@ jobs:
         target-folder: PR${{github.event.number}}
         repository-name: HyrodiumOrg/preview
     - name: Post comment with preview link
-      uses: peter-evans/create-or-update-comment@v4
+      uses: peter-evans/create-or-update-comment@v2
       with:
         issue-number: ${{github.event.number}}
         body: |
           hoge
-        token: ${{ secrets.GITHUB_TOKEN }}
+        # token: ${{ secrets.GITHUB_TOKEN }}
