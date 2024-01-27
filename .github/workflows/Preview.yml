@@ -55,5 +55,4 @@ jobs:
       with:
         issue-number: ${{github.event.number}}
         body: |
-          Preview site is available [here](https://hyrodiumorg.github.io/preview/PR${{github.event.number}}).
-        reactions: '+1'
+          Preview site is available at https://hyrodiumorg.github.io/preview/PR${{github.event.number}}.
