@@ -1,11 +1,13 @@
 name: Preview
 on:
+  pull_request:
   pull_request_target:
     types: [labeled]
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    if: contains(github.event.pull_request.labels.*.name, 'ok to preview')
+    if: ( github.event.pull_request.head.repo.fork == false ) ||
+        ( contains(github.event.pull_request.labels.*.name, 'ok to preview') )
     permissions:
       pull-requests: write
     steps:
