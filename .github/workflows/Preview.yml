@@ -50,9 +50,14 @@ jobs:
         folder: __site
         target-folder: PR${{github.event.number}}
         repository-name: HyrodiumOrg/preview
-    - name: Post comment with preview link
-      uses: peter-evans/create-or-update-comment@v2
+    - name: Create comment
+      uses: peter-evans/create-or-update-comment@v4
       with:
-        issue-number: ${{github.event.number}}
+        issue-number: 1
         body: |
-          hoge
+          This is a multi-line test comment
+          - With GitHub **Markdown** :sparkles:
+          - Created by [create-or-update-comment][1]
+
+          [1]: https://github.com/peter-evans/create-or-update-comment
+        reactions: '+1'
