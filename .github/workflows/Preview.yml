@@ -47,12 +47,13 @@ jobs:
         ssh-key: ${{ secrets.PREVIEW }}
         branch: gh-pages
         folder: __site
-        target-folder: PR${{github.event.number}}
+        target-folder: PR${{ github.event.number }}
         repository-name: HyrodiumOrg/preview
     - name: Create comment
       uses: peter-evans/create-or-update-comment@v4
       with:
-        issue-number: ${{github.event.number}}
+        issue-number: ${{ github.event.number }}
         body: |
           Document generation succeeded!
-          Preview site is available at https://hyrodiumorg.github.io/preview/PR${{github.event.number}} 🚀
+          Preview site is available at https://hyrodiumorg.github.io/preview/PR${{ github.event.number }} 🚀
+        token: ${{ secrets.GITHUB_TOKEN }}
