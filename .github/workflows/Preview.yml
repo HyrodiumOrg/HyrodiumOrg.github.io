@@ -55,5 +55,5 @@ jobs:
       with:
         issue-number: ${{github.event.number}}
         body: |
-          Preview site is available [here](https://hyrodiumorg.github.io/preview/PR${{github.event.number}}).
+          hoge
         token: ${{ secrets.GITHUB_TOKEN }}
