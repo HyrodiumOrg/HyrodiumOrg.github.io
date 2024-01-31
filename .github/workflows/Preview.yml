@@ -23,6 +23,8 @@ jobs:
       uses: julia-actions/setup-julia@v1
       with:
         version: '1'
+    - name: Fix prepath
+      run: sed -i 's/# prepath = "preview\/PR"/prepath = "preview\/PR${{ github.event.number }}"/' config.md
     - name: Build
       run: julia -e '
             using Pkg; Pkg.activate("."); Pkg.instantiate();
